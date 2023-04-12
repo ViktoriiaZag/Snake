@@ -17,12 +17,14 @@ public class GameClock extends Thread{
 				
 				if(Collision.collideSelf()) {
 					Snake.tails.clear();
+					Snake.score=0;
 				}
 				
 				if(Collision.collideWall()) {
 					Snake.tails.clear();
 					Snake.head.setX(7);
 					Snake.head.setY(7);
+					Snake.score=0;
 				}
 				
 			} 

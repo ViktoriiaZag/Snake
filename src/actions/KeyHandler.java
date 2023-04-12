@@ -10,14 +10,13 @@ public class KeyHandler  implements KeyListener{
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
 		switch (e.getKeyCode()) {
-			// nach oben
+			 
 			case KeyEvent.VK_W: {
 				if(!(Snake.head.getDir()== Dir.DOWN) && !Snake.waitToMove) {
 					Snake.head.setDir(Dir.UP);
@@ -25,8 +24,7 @@ public class KeyHandler  implements KeyListener{
 				}
 				break;
 			}
-			
-			// nach links
+						 
 			case KeyEvent.VK_A: {
 				if(!(Snake.head.getDir()== Dir.RIGHT) && !Snake.waitToMove) {
 					Snake.head.setDir(Dir.LEFT);
@@ -35,7 +33,6 @@ public class KeyHandler  implements KeyListener{
 				break;
 			}
 			
-			// nach unten
 			case KeyEvent.VK_S: {
 				if(!(Snake.head.getDir()== Dir.UP) && !Snake.waitToMove) {
 					Snake.head.setDir(Dir.DOWN);
@@ -44,7 +41,6 @@ public class KeyHandler  implements KeyListener{
 				break;
 			}
 			
-			// nach rechts
 			case KeyEvent.VK_D: {
 				if(!(Snake.head.getDir()== Dir.LEFT) && !Snake.waitToMove) {
 					Snake.head.setDir(Dir.RIGHT);
@@ -57,9 +53,6 @@ public class KeyHandler  implements KeyListener{
 
 	@Override
 	public void keyReleased(KeyEvent e) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub		
 	}
-	
-	
 }

@@ -1,11 +1,13 @@
 package game;
 
 import java.awt.Point;
+import java.security.PublicKey;
 import java.util.ArrayList;
 
 import gui.Gui;
 
 public class Snake {
+	public static int score=0, bestscore=0;
 	public static boolean waitToMove = false;
 	public static Head head = new Head(7,7);
 	public static ArrayList<Tail> tails = new ArrayList<>();

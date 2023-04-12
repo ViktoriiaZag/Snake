@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -54,6 +55,11 @@ public class Draw extends JLabel {
 		//Draw Border
 		graphics.setColor(Color.BLACK);
 		graphics.drawRect(Gui.xoff, Gui.yoff, 512, 512);
+		
+		//Draw Score
+		graphics.setFont(new Font("Arial",Font.BOLD, 20 ));
+		graphics.drawString("Score: " + Snake.score, 5 , 25);
+		graphics.drawString("Bestscore: " + Snake.bestscore, 655 , 25);
 		
 		repaint();
 		

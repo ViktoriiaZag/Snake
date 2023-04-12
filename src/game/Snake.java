@@ -11,7 +11,7 @@ public class Snake {
 	public static ArrayList<Tail> tails = new ArrayList<>();
 	public static PickUp pickUp= new PickUp();
 	
-	public void addTail() {
+	public static void addTail() {
 		if(tails.size()<1) {
 			tails.add(new Tail(head.getX(), head.getY()));
 		}
@@ -36,7 +36,6 @@ public class Snake {
 		
 		//Move first Tail to Head
 		if(tails.size()>=1) {
-			for(int i= tails.size()-1; i>=1; i--) {
 				if(tails.get(0).isWait()) {
 					tails.get(0).setWait(false);
 				}
@@ -44,7 +43,6 @@ public class Snake {
 					tails.get(0).setX(head.getX());
 					tails.get(0).setY(head.getY());
 				}
-			}
 		}
 		
 		//move Head
@@ -54,7 +52,7 @@ public class Snake {
 				break;
 				
 			case UP: 
-				head.setX(head.getY()-1);
+				head.setY(head.getY()-1);
 				break;
 				
 			case LEFT: 
@@ -62,12 +60,12 @@ public class Snake {
 				break;
 				
 			case DOWN: 
-				head.setX(head.getY()+1);
+				head.setY(head.getY()+1);
 				break;
 		}
 	}
 	
-	//Position von Koordinaten
+	//Position
 	public static Point ptc(int x, int y) {
 		Point point= new Point(0,0);
 		point.x= x*32 +Gui.xoff;
